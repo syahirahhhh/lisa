@@ -1,0 +1,54 @@
+ubuntu@ip-172-31-16-54:~$ cd ~
+ubuntu@ip-172-31-16-54:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-16-54:~$ mkdir Algo1
+ubuntu@ip-172-31-16-54:~$ cd Algo1
+ubuntu@ip-172-31-16-54:~/Algo1$ mkdir config bin logs scripts
+ubuntu@ip-172-31-16-54:~/Algo1$ cd config
+ubuntu@ip-172-31-16-54:~/Algo1/config$ touch config.config variables
+ubuntu@ip-172-31-16-54:~/Algo1/config$ cd ..
+ubuntu@ip-172-31-16-54:~/Algo1$ cd scripts
+ubuntu@ip-172-31-16-54:~/Algo1/scripts$ touch start.sh stop.sh admin.sh
+ubuntu@ip-172-31-16-54:~/Algo1/scripts$ cd ..
+ubuntu@ip-172-31-16-54:~/Algo1$ cd logs
+ubuntu@ip-172-31-16-54:~/Algo1/logs$ touch today.log
+ubuntu@ip-172-31-16-54:~/Algo1/logs$ cd ~
+ubuntu@ip-172-31-16-54:~$ find ./Algo1 -print
+./Algo1
+./Algo1/bin
+./Algo1/config
+./Algo1/config/variables
+./Algo1/config/config.config
+./Algo1/logs
+./Algo1/logs/today.log
+./Algo1/scripts
+./Algo1/scripts/admin.sh
+./Algo1/scripts/stop.sh
+./Algo1/scripts/start.sh
+ubuntu@ip-172-31-16-54:~$ cd ./Algo1/config
+ubuntu@ip-172-31-16-54:~/Algo1/config$ rm variables
+ubuntu@ip-172-31-16-54:~/Algo1/config$ cd ..
+ubuntu@ip-172-31-16-54:~/Algo1$ rmdir bin
+ubuntu@ip-172-31-16-54:~/Algo1$ cd ~
+ubuntu@ip-172-31-16-54:~$ mkdir ./Algo1/bin
+ubuntu@ip-172-31-16-54:~$ cd Algo1
+ubuntu@ip-172-31-16-54:~/Algo1$ cd logs
+ubuntu@ip-172-31-16-54:~/Algo1/logs$ mkdir oldlogs
+ubuntu@ip-172-31-16-54:~/Algo1/logs$ cd oldlogs
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs$ mkdir 2019 2018 2017
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs$ cd 2017
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs/2017$ touch 2017.log
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs/2017$ cd ..
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs$ cd 2018
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs/2018$ touch 2018.log
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs/2018$ cd ..
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs$ cd 2019
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs/2019$ touch 2019.log
+ubuntu@ip-172-31-16-54:~/Algo1/logs/oldlogs/2019$ cd ~
+ubuntu@ip-172-31-16-54:~$ rm -rf ./Algo1/logs/oldlogs
+ubuntu@ip-172-31-16-54:~$ find ./Algo1 -name "*.sh"
+./Algo1/scripts/admin.sh
+./Algo1/scripts/stop.sh
+./Algo1/scripts/start.sh
+ubuntu@ip-172-31-16-54:~$ cd ./Algo1/scripts
+ubuntu@ip-172-31-16-54:~/Algo1/scripts$ rm s*.sh
