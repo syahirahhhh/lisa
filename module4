@@ -1,11 +1,11 @@
 ubuntu@ip-172-31-16-54:~$ STOCK="AAPL"
 ubuntu@ip-172-31-16-54:~$ echo $STOCK
 AAPL
-ubuntu@ip-172-31-16-54:~$ STOCK="AAPL_US"
+ubuntu@ip-172-31-16-54:~$ STOCK="AAPL_US" #or STOCK+="_US"
 ubuntu@ip-172-31-16-54:~$ PRICE=290.84
 ubuntu@ip-172-31-16-54:~$ echo "The current price of" $STOCK "is" $PRICE
 The current price of AAPL_US is 290.84
-ubuntu@ip-172-31-16-54:~$ ubuntu="WHOAMI"
+ubuntu@ip-172-31-16-54:~$ WHOAMI=$USER
 ubuntu@ip-172-31-16-54:~$ SERVERTYPE=$(uname)
 ubuntu@ip-172-31-16-54:~$ echo $SERVERTYPE
 Linux
@@ -18,3 +18,4 @@ ubuntu@ip-172-31-16-54:~$ cd ~
 ubuntu@ip-172-31-16-54:~$ mkdir scripts
 ubuntu@ip-172-31-16-54:~$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH+=/"scripts"
