@@ -19,3 +19,50 @@ ubuntu@ip-172-31-16-54:~$ mkdir scripts
 ubuntu@ip-172-31-16-54:~$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 PATH+=/"scripts"
+ubuntu@ip-172-31-16-54:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin/scripts
+ubuntu@ip-172-31-16-54:~$ ls
+Algo1  Exercise1  config  scripts  syahirah
+ubuntu@ip-172-31-16-54:~$ rm -rf Exercise1 config scripts syahirah
+ubuntu@ip-172-31-16-54:~$ mkdir Payment1
+ubuntu@ip-172-31-16-54:~$ cd Payment1
+ubuntu@ip-172-31-16-54:~/Payment1$ mkdir logs configuration scripts
+ubuntu@ip-172-31-16-54:~/Payment1$ cd scripts
+ubuntu@ip-172-31-16-54:~/Payment1/scripts$ touch start.sh
+ubuntu@ip-172-31-16-54:~/Payment1/scripts$ cd ..
+ubuntu@ip-172-31-16-54:~/Payment1$ cd configuration
+ubuntu@ip-172-31-16-54:~/Payment1/configuration$ touch instance.properties
+ubuntu@ip-172-31-16-54:~/Payment1/configuration$ chmod 344 instance.properties
+ubuntu@ip-172-31-16-54:~/Payment1/configuration$ ls -l
+total 0
+--wxr--r-- 1 ubuntu ubuntu 0 Jul 22 04:44 instance.properties
+ubuntu@ip-172-31-16-54:~/Payment1/configuration$ cd ..
+ubuntu@ip-172-31-16-54:~/Payment1$ cd scripts
+ubuntu@ip-172-31-16-54:~/Payment1/scripts$ chmod 771 start.sh
+ubuntu@ip-172-31-16-54:~/Payment1/scripts$ ls -l
+total 0
+-rwxrwx--x 1 ubuntu ubuntu 0 Jul 22 04:44 start.sh
+ubuntu@ip-172-31-16-54:~/Payment1/scripts$ cd ~
+ubuntu@ip-172-31-16-54:~$ touch cat.output
+ubuntu@ip-172-31-16-54:~$ chmod 474 cat.output
+ubuntu@ip-172-31-16-54:~$ ls -l
+total 4
+drwxrwxr-x 5 ubuntu ubuntu 4096 Jul 22 04:43 Payment1
+-r--rwxr-- 1 ubuntu ubuntu    0 Jul 22 04:50 cat.output
+ubuntu@ip-172-31-16-54:~$ cd ~
+ubuntu@ip-172-31-16-54:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-16-54:~$ rm -rf Payment1
+ubuntu@ip-172-31-16-54:~$ rm -rf cat.output
+ubuntu@ip-172-31-16-54:~$ echo "cat.output is being deleted"
+cat.output is being deleted
+ubuntu@ip-172-31-16-54:~$ mkdir temp
+ubuntu@ip-172-31-16-54:~$ cd temp
+ubuntu@ip-172-31-16-54:~/temp$ echo $MYTEMP
+
+ubuntu@ip-172-31-16-54:~/temp$ MYTEMP= 
+ubuntu@ip-172-31-16-54:~/temp$ echo $MYTEMP
+
+ubuntu@ip-172-31-16-54:~/temp$ cd ..
+ubuntu@ip-172-31-16-54:~$ rmdir temp
+
