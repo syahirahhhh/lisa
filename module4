@@ -55,6 +55,7 @@ ubuntu@ip-172-31-16-54:~$ pwd
 /home/ubuntu
 ubuntu@ip-172-31-16-54:~$ rm -rf Payment1
 ubuntu@ip-172-31-16-54:~$ rm -i cat.output
+rm: remove regular file 'cat.output'? yes
 ubuntu@ip-172-31-16-54:~$ mkdir temp
 ubuntu@ip-172-31-16-54:~$ MYTEMP=/temp
 ubuntu@ip-172-31-16-54:~/temp$ echo $MYTEMP
