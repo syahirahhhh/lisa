@@ -58,9 +58,7 @@ ubuntu@ip-172-31-16-54:~$ rm -i cat.output
 rm: remove regular file 'cat.output'? yes
 ubuntu@ip-172-31-16-54:~$ mkdir temp
 ubuntu@ip-172-31-16-54:~$ MYTEMP=/temp
-ubuntu@ip-172-31-16-54:~/temp$ echo $MYTEMP
-
-ubuntu@ip-172-31-16-54:~/temp$ unset MYTEMP
-
-ubuntu@ip-172-31-16-54:~/temp$ cd ..
+ubuntu@ip-172-31-16-54:~$ echo $MYTEMP
+/temp
+ubuntu@ip-172-31-16-54:~$ unset MYTEMP
 ubuntu@ip-172-31-16-54:~$ rmdir temp
