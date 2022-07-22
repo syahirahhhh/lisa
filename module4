@@ -44,6 +44,7 @@ total 0
 -rwxrwx--x 1 ubuntu ubuntu 0 Jul 22 04:44 start.sh
 ubuntu@ip-172-31-16-54:~/Payment1/scripts$ cd ~
 ubuntu@ip-172-31-16-54:~$ touch cat.output
+ubuntu@ip-172-31-16-54:~$ man cat>cat.ouput
 ubuntu@ip-172-31-16-54:~$ chmod 474 cat.output
 ubuntu@ip-172-31-16-54:~$ ls -l
 total 4
@@ -53,16 +54,12 @@ ubuntu@ip-172-31-16-54:~$ cd ~
 ubuntu@ip-172-31-16-54:~$ pwd
 /home/ubuntu
 ubuntu@ip-172-31-16-54:~$ rm -rf Payment1
-ubuntu@ip-172-31-16-54:~$ rm -rf cat.output
-ubuntu@ip-172-31-16-54:~$ echo "cat.output is being deleted"
-cat.output is being deleted
+ubuntu@ip-172-31-16-54:~$ rm -i cat.output
 ubuntu@ip-172-31-16-54:~$ mkdir temp
-ubuntu@ip-172-31-16-54:~$ cd temp
+ubuntu@ip-172-31-16-54:~$ MYTEMP=/temp
 ubuntu@ip-172-31-16-54:~/temp$ echo $MYTEMP
 
-ubuntu@ip-172-31-16-54:~/temp$ MYTEMP= 
-ubuntu@ip-172-31-16-54:~/temp$ echo $MYTEMP
+ubuntu@ip-172-31-16-54:~/temp$ unset MYTEMP
 
 ubuntu@ip-172-31-16-54:~/temp$ cd ..
 ubuntu@ip-172-31-16-54:~$ rmdir temp
-
