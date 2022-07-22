@@ -1,0 +1,31 @@
+ubuntu@ip-172-31-16-54:~$ cd ~
+ubuntu@ip-172-31-16-54:~$ vi fixGenerator.sh
+ubuntu@ip-172-31-16-54:~$ chmod 744 fixGenerator.sh
+ubuntu@ip-172-31-16-54:~$ ./fixGenerator.sh &
+ubuntu@ip-172-31-16-54:~$ cat fixGenerator.sh
+ubuntu@ip-172-31-16-54:~$ cat -n fixGenerator.sh
+ubuntu@ip-172-31-16-54:~$ cat fixlog20220722120987.log > newlog.log
+ubuntu@ip-172-31-16-54:~$ mkdir logs
+ubuntu@ip-172-31-16-54:~$ mv newlog.log ./logs/
+ubuntu@ip-172-31-16-54:~$ cat fixlog20220722120987.log >> ./logs/newlog.log
+ubuntu@ip-172-31-16-54:~$ ln -s ./logs/newlog.log Daily
+ubuntu@ip-172-31-16-54:~$ cd ~
+ubuntu@ip-172-31-16-54:~$ less fixlog20220722120987.log #or cat fix... | less
+ubuntu@ip-172-31-16-54:~$ vi fix20220722120987.log #then type in vi editor /35=8
+ubuntu@ip-172-31-16-54:~$ cat fix20220722120987.log | grep '35=8' > ./logs/newOrders.log
+ubuntu@ip-172-31-16-54:~$ cp newOrders.log /home/ubuntu
+ubuntu@ip-172-31-16-54:~$ wc -l newOrders.log
+ubuntu@ip-172-31-16-54:~$ cat fix20220722120987.log | grep '35=0' > ./logs/buyMessages.log
+ubuntu@ip-172-31-16-54:~$ wc -l buyMessages.log
+ubuntu@ip-172-31-16-54:~$ wc buyMessages.log
+ubuntu@ip-172-31-16-54:~$ cat buyMessages.log | grep -L '35=8' > ./logs/noNewOrders.log
+ubuntu@ip-172-31-16-54:~$ wc noNewOrders.log
+ubuntu@ip-172-31-16-54:~$ tail -n 5 noNewOrders.log
+ubuntu@ip-172-31-16-54:~$ cat fix20220722120987.log | grep "AAPL" | head -n 2
+ubuntu@ip-172-31-16-54:~$ ln -s fixGenerator.sh fix
+ubuntu@ip-172-31-16-54:~$ tail fix20220722120987.log | grep '35=8'
+ubuntu@ip-172-31-16-54:~$ mkdir superLogs
+ubuntu@ip-172-31-16-54:~$ cp ./logs/ ./superLogs
+ubuntu@ip-172-31-16-54:~$ cat fix20220722120987.log | grep "FB" | wc
+ubuntu@ip-172-31-16-54:~$ wc fix20220722120987.log
+ubuntu@ip-172-31-16-54:~$ cat fix20220722120987.log | grep "NLFX" | wc
