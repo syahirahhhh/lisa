@@ -1,0 +1,17 @@
+ERD is a visual representation of the database structure. It includes the following:
+-	The tables (and each of their names) required by the database
+-	A list of fields contained in each table
+-	Metadata about each field, ie name of field, its data type, and whether or not it is nullable
+-	Identification of all primary and foreign key fields
+-	How each table is related to each other
+Note: ERD does not include data, it just describes the type of data used in the table
+
+TABLE is represented by a rectangle, normally divided into three sections horizontally. Top section is name of the table (like a title), next section down is the primary key field(s), and the remaining fields are at the bottommost section.
+
+FIELDS is more information about each filed. For instance, which fields are nullable and what data type each field uses. Example: ContactID datatype is INT, Name datatype is string so, VARCHAR(n) where n is the limit of the number of characters in Name.
+
+KEYS is to simply indicate PK or FK to the left of the field names in the table (whenever necessary). Some may not have any keys.
+
+RELATIONSHIPS between 2 tables can be represented in many ways.
+
+1.	(Simplest) To use an arrow that points from one side of the relationship to the many side of the relationship. Eg, each contact can have many phone numbers, but each phone number is associated with exactly one contact, so arrow points from Contact to Phone.
