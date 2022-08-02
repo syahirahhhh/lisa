@@ -9,11 +9,11 @@ Egs from Carl:
 -	If your bank account is already $0 and you wish to deposit money, then an amount cannot 
 be deducted further. <all must be valid>
 -	If a customer is removed from the database, the products that they have bought will be 
-assigned to nothing  inconsistency, so should we just remove the whole column? ie cascade 
-delete BUT the data (their purchased products) should not be deleted without warning, these 
-data may still be needed. Similarly, someone deleting an account on social medias like 
-Twitter should not remove his replies to his friends’ posts. It will lead to discrepancy 
-and inconsistency.
+assigned to nothing, causinginconsistency, so should we just remove the whole column? ie 
+cascade delete BUT the data (their purchased products) should not be deleted without 
+warning, these data may still be needed. Similarly, someone deleting an account on social 
+medias like Twitter should not remove his replies to his friends’ posts. It will lead to 
+discrepancy and inconsistency.
 
 I: 2 diff channels which are isolated although intermingling databases. When someone makes 
 changes to database, effects are not visible to other transactions until he has completed 
