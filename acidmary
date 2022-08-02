@@ -1,0 +1,28 @@
+ACID stands for Atomicity, Consistency, Isolation (or Integration for some companies) 
+and Durability.
+
+A: if there is a failure in the middle of the database, the server can come back 
+online and display the data back to its pre-transaction state (aka right before it fails).
+
+C: Transaction can move from one state of database to another, everything must be valid.
+Egs from Carl: 
+-	If your bank account is already $0 and you wish to deposit money, then an amount cannot 
+be deducted further. <all must be valid>
+-	If a customer is removed from the database, the products that they have bought will be 
+assigned to nothing  inconsistency, so should we just remove the whole column? ie cascade 
+delete BUT the data (their purchased products) should not be deleted without warning, these 
+data may still be needed. Similarly, someone deleting an account on social medias like 
+Twitter should not remove his replies to his friends’ posts. It will lead to discrepancy 
+and inconsistency.
+
+I: 2 diff channels which are isolated although intermingling databases. When someone makes 
+changes to database, effects are not visible to other transactions until he has completed 
+his transaction. So, transactions do not interfere with each other. It can be that while 
+Person A is doing his transaction, Person B cannot see the data until Person A’s transaction 
+is complete. Another level of isolation is dirty read (temporary data – volatile memory) 
+where Person B can see the data including the Person A’s changes although not completed. 
+But, once Person A has completed, if his changes fail, what Person B has read is not the 
+finalized set of data, that’s why “dirty read”.
+
+D: When saved to database, the transaction remains. It is committed to long term memory 
+(ie storage drive).
