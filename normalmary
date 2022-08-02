@@ -1,0 +1,23 @@
+Normalization breaks down relationships into simpler structures. After normalization, performance 
+improves, and relationships are not as complex since there are lesser data duplications or data redundancy. Data redundancy is having multiple copies of the same data in the database. Overall, with normalization, we end up with multiple clear and simple tables.
+
+For example, if we want to change one information data, we must update every single row containing the same information. This means multiple individual transactions and thus, becomes problematic when there are millions of data. Also, it is time-consuming, and may have mistakes along the way (aka update anomaly). Delete anomaly is removing a certain data and the whole column will be affected, causing other information which is still needed in the database to disappear. The opposite applies to inert anomaly.
+
+Start with heap table with all the data to start normalizing.
+
+First Normal Form (1NF): must satisfy following conditions
+-	No top-to-bottom (left-to-right) ordering to rows (columns): can understand 2nd row (column) without referring to the other rows (columns).
+-	Every row uniquely identified: Need to be distinguishable between the rows. To satisfy this, can add a primary key (PK) to table ie ID.
+-	Every field contains only 1 value: Cannot store multiple values (no commas). To satisfy this, split to different columns.
+Second Normal Form (2NF)
+-	must already be in 1NF
+-	every non-PK column is functionally dependent on entire PK but not on any subset of PK
+-	no repeat of data across rows
+-	TO SATISFY 2NF, split data into multiple tables and assign foreign key (FK) so that we only need to make a single change.
+Third Normal Form (3NF)
+-	must already be in 2NF
+-	no non-PK column is transitively dependent on PK. Consider City relies on Zipcode, Zipcode relies on ContactID and City relies on ContactID. So create another table with Zipcode and City columns, so that changing someone’s location will be in sync.
+Denormalization
+-	going backwards
+-	normalization may not always be the answer (may take longer time to process since more tables)
+-	this leads to quicker response in getting data where in a glance, you can view every details at once
