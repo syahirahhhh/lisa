@@ -15,3 +15,5 @@ KEYS is to simply indicate PK or FK to the left of the field names in the table 
 RELATIONSHIPS between 2 tables can be represented in many ways.
 
 1.	(Simplest) To use an arrow that points from one side of the relationship to the many side of the relationship. Eg, each contact can have many phone numbers, but each phone number is associated with exactly one contact, so arrow points from Contact to Phone.
+
+2.	A crow's foot marking (three small lines replacing arrowhead) on the many side of the relationship to indicate that for eg, any record in the Contact table can be associated with several records in the Phone table. Also, a small vertical line on the Contact side will indicate that each record in the Contact table must have at least one related record in the Phone table. It is a business rule for database that there must be at least one phone number for each contact.
