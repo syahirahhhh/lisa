@@ -1,6 +1,20 @@
-DevOps came about to bridge the gap between development team and operation team. It is not a tool or a title, it is a practice used in software development. Development teams and IT operations teams can have different skills and different goals. Developers want to introduce new features to an application, while operations teams want to preserve the stability of an application once it is released. DevOps is all about the unification and automation of processes, and DevOps engineers are instrumental in combining code, application maintenance, and application management.
+DevOps came about to bridge the gap between development team and operation team. It is not a 
+tool or a title, it is a practice used in software development. Development teams and IT 
+operations teams can have different skills and different goals. Developers want to introduce 
+new features to an application, while operations teams want to preserve the stability of an 
+application once it is released. DevOps is all about the unification and automation of processes, 
+and DevOps engineers are instrumental in combining code, application maintenance, and application
+management.
 
-They introduce processes, tools, and methodologies to balance needs throughout the software development life cycle, from coding and deployment to maintenance and updates. They ensure continuous build, test, package, deployment and validation of application and environment. They use tools such as Git to have control over code changes for revision or future reference. They utilise automation servers like Jenkins to build and test code and to automate tasks. There will be monitoring where they can identify issues and observe what is happening in the environment. Cloud provider like AWS launches the application. DevOps relies on constant communication and updates on what the bug is, when did the bug happen, who needs to fix it. Communication channels include Git, Slack etc 
+They introduce processes, tools, and methodologies to balance needs throughout the software 
+development life cycle, from coding and deployment to maintenance and updates. They ensure 
+continuous build, test, package, deployment and validation of application and environment. 
+They use tools such as Git to have control over code changes for revision or future reference. 
+They utilise automation servers like Jenkins to build and test code and to automate tasks. 
+There will be monitoring where they can identify issues and observe what is happening in the 
+environment. Cloud provider like AWS launches the application. DevOps relies on constant 
+communication and updates on what the bug is, when did the bug happen, who needs to fix it. 
+Communication channels include Git, Slack etc 
 
 Sprint system: Sprint, Release, Deploy, Monitor, Incident, Post-mortem (cycle repeats)
 
